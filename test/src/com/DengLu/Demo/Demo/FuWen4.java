@@ -1,6 +1,6 @@
 package com.DengLu.Demo.Demo;
 
-public class FuWen4 extends FuWen{
+public class FuWen4 extends FuWen2{
     private String cd;      //cd
     private String wc;      //物理穿透
     private String fc;      //法术穿透

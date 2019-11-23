@@ -1,6 +1,6 @@
 package com.DengLu.Demo.Demo;
 
-public class FuWen5 extends FuWen{
+public class FuWen5 extends FuWen2{
     private String fg;      //法术攻击
     private String wf;      //物理防御
     private String ff;      //法术防御
