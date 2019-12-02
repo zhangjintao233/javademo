@@ -20,4 +20,11 @@ public class DengLu {
         String s = "用户名:"+this.getYhm()+"密码"+this.getMim();
         return s;
     }
+    public DengLu(){
+
+    }
+    public  DengLu(int a,int b,int c){
+
+    }
+
 }

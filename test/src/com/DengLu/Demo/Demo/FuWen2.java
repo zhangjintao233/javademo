@@ -5,10 +5,13 @@ public class FuWen2 {
     protected String ys;    //颜色
     protected String dj;    //等级
     protected String lx;    //类型
+    protected int jc;    //加成
+    protected int jcc;    //加成
 
-    
-    public void kzc(){
-        System.out.println("这是父类的方法");
+
+
+    public FuWen2(){
+
     }
 
 }

@@ -10,5 +10,14 @@ public class FuWen5 extends FuWen2{
     private String fsxx;    //法术吸血
     private String wlxx;    //物理吸血
     private String sm;      //生命
-    private String ys;      //移速
+//    private String ys;      //移速
+
+    public  FuWen5(String a,String b,String c,String d,int e){
+        this.ys = a;
+        this.mz = b;
+        this.dj = c;
+        this.lx = d;
+        this.jc = e;
+
+    }
 }

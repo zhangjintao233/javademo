@@ -11,6 +11,19 @@ public class FuWen3 extends FuWen2{
     private String wlxx;    //物理吸血
     private String fc;      //法穿
 
-    FuWen2 xc = new FuWen2();
+    public FuWen3(){
+
+    }
+
+    public  FuWen3(String a,String b,String c,String d,int e){
+        this.ys = a;
+        this.mz = b;
+        this.dj = c;
+        this.lx = d;
+        this.jc = e;
+
+
+    }
+
 
 }
