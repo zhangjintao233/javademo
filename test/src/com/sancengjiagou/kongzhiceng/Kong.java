@@ -1,6 +1,7 @@
 package com.sancengjiagou.kongzhiceng;
 
 import com.sancengjiagou.yewuceng.Ye;
+import com.sancengjiagou.yonghu.Users;
 
 public class Kong {
     private Ye y = new Ye();

@@ -6,7 +6,7 @@ import com.sancengjiagou.yonghu.Users;
 import java.util.Scanner;
 
 public class Shu {
-    Scanner  sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     private static Users[] hh;
     private static int[] aee;
     private static shangpin[] arr;
@@ -59,11 +59,11 @@ public class Shu {
     }
 
     public int chongzhi(int a) {
-//        if (a >= 0 && a <= 100) {
+        if (a > 0 && a <= 100) {
         aee[0] = aee[0] + a;
         return aee[0];
-//        }
-//        return -1;
+        }
+        return -1;
     }
 
     public void wuping() {
@@ -131,8 +131,9 @@ public class Shu {
             System.out.println("物品价格为:" + arr[h].jg);
             System.out.println("============================");
             m = m + arr[i].jg;
-        tg: for (int t = 0;t<ass.length;t++){
-                if (ass[t] == null){
+            tg:
+            for (int t = 0; t < ass.length; t++) {
+                if (ass[t] == null) {
                     ass[t] = arr[h].mz;
                     break tg;
                 }
@@ -190,10 +191,11 @@ public class Shu {
 
     }
 
-    public  void jiage() {
-        int x = 1;
+    public void jiage() {
+        int x = 0;
         for (int i = 200; i > 0; i--) {
             if (arr[0].jg == i) {
+                x++;
                 System.out.println("物品排行为:" + x + "。" + "物品名字为:" + arr[0].mz + "。" + "物品价格为:" + arr[0].jg);
             } else if (arr[1].jg == i) {
                 x++;
@@ -242,38 +244,38 @@ public class Shu {
     public void shangjia() {
         if (aee[0] >= 500) {
             for (int i = 0; i < aoo.length; i++) {
-                    System.out.println("========================");
-                    System.out.println("物品序号为:0。" + aoo[0]);
-                    System.out.println("物品序号为:1。" + aoo[1]);
-                    System.out.println("物品序号为:2。" + aoo[2]);
-                    System.out.println("物品序号为:3。" + aoo[3]);
-                    System.out.println("物品序号为:4。" + aoo[4]);
-                    System.out.println("物品序号为:5。" + aoo[5]);
-                    System.out.println("物品序号为:6。" + aoo[6]);
-                    System.out.println("物品序号为:7。" + aoo[7]);
-                    System.out.println("物品序号为:8。" + aoo[8]);
-                    System.out.println("物品序号为:9。" + aoo[9]);
-                    System.out.println("========================");
-                    System.out.println("输入你想要上架的商品序号.11.返回");
-                    int h = sc.nextInt();
-                    if (h == 11) {
-                        return;
+                System.out.println("========================");
+                System.out.println("物品序号为:0。" + aoo[0]);
+                System.out.println("物品序号为:1。" + aoo[1]);
+                System.out.println("物品序号为:2。" + aoo[2]);
+                System.out.println("物品序号为:3。" + aoo[3]);
+                System.out.println("物品序号为:4。" + aoo[4]);
+                System.out.println("物品序号为:5。" + aoo[5]);
+                System.out.println("物品序号为:6。" + aoo[6]);
+                System.out.println("物品序号为:7。" + aoo[7]);
+                System.out.println("物品序号为:8。" + aoo[8]);
+                System.out.println("物品序号为:9。" + aoo[9]);
+                System.out.println("========================");
+                System.out.println("输入你想要上架的商品序号.11.返回");
+                int h = sc.nextInt();
+                if (h == 11) {
+                    return;
+                } else {
+                    if (aoo[h] != null) {
+                        att[h] = aoo[h];
+                        System.out.println("物品序号为:" + h + "。" + att[h]);
+                        System.out.println("========================");
+                        aoo[h] = null;
                     } else {
-                        if (aoo[h] != null){
-                            att[h] = aoo[h];
-                            System.out.println("物品序号为:" + h + "。" + att[h]);
-                            System.out.println("========================");
-                            aoo[h] = null;
-                        }else {
-                            System.out.println("你没有可以上架的物品");
-                        }
+                        System.out.println("你没有可以上架的物品");
+                    }
 
-                    }
-                    System.out.println("你是否还要继续上架。1.上架，2.停止");
-                    int h2 = sc.nextInt();
-                    if (h2 != 1) {
-                        return;
-                    }
+                }
+                System.out.println("你是否还要继续上架。1.上架，2.停止");
+                int h2 = sc.nextInt();
+                if (h2 != 1) {
+                    return;
+                }
             }
         } else {
             System.out.println("你的余额不足500元，请充值后，再来拍卖");
@@ -301,7 +303,7 @@ public class Shu {
             } else if (i == 2) {
                 return;
             } else {
-                System.out.println("你是不是想多了，傻逼");
+                System.out.println("这个位置没有你的物品");
             }
         }
         return;
@@ -310,7 +312,7 @@ public class Shu {
     public void baibaoxiang() {
         for (int i = 0; i < aoo.length; i++) {
             if (aoo[i] != null) {
-                System.out.println("商品为:"+aoo[i]);
+                System.out.println("商品为:" + aoo[i]);
             } else {
                 System.out.println("商品为:" + null);
             }

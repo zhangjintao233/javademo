@@ -10,18 +10,15 @@ public class Ye {
     private shangpin p = new shangpin();
     //注册方法
     public String zhuce(String a,String b){
-        if (a != null && b != null){
             Users v = s.xt(a,b);
             if (v != null){
                 return "你输入的用户名已存在";
             }
-        }
 
-
-
-        r.setYhm(a);
-        r.setMim(b);
-        int i = s.fr(r);
+        Users kk = new Users();
+        kk.setYhm(a);
+        kk.setMim(b);
+        int i = s.fr(kk);
         if (i == 1){
             return "注册成功";
         }
